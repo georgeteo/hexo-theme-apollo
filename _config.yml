@@ -1,22 +1,28 @@
 menu:
     Blog: /
     Archive: /archives/
-    Weibo: http://weibo.com/sunchongsheng
-    GitHub: https://github.com/pinggod
+    GitHub: https://github.com/wicksome
+    Resume: https://www.linkedin.com/in/yeongjun/
     Rss: /atom.xml
 
-favicon: /favicon.png
+favicon: /favicon.ico
 logo: /favicon.png
 
 # Comment
 # e.g disqus: seansun
-disqus:
+disqus: wicksome
 duoshuo:
 cloudTie:
 
 # Analytics
 # google-analytics:
-# ga: UA-xxxxxxxx-x
+ga: UA-43444044-3
+
+# Adsense
+# google-adsense:
+gad:
+    client: ca-pub-2402079508512433
+    slot: 9218385844
 
 # Copyright Infomation
-startyear: 2015
+startyear: 2017
