@@ -5,6 +5,16 @@ mixin postInfo(item)
             a.post-from(href=item.from target="_blank" title=item.from)!= __('translated')
 
 
+mixin postMeta(item)
+    if item.tags
+        i.fa.fa-tag
+        - item.categories.sort('posts').each(function(item) {
+            a.tag(href=config.root + item.path, title= item.name)= item.name + " "
+        - });
+        - item.tags.sort('posts').each(function(item) {
+            a.tag(href=config.root + item.path, title= item.name)= item.name + " "
+        - });
+
 //- Index Page
 mixin posts()
     ul.home.post-list
@@ -44,5 +54,6 @@ mixin post(item)
             h1.post-title
                 != item.title
             +postInfo(item)
+            +postMeta(item)
             .post-content
                 != item.content

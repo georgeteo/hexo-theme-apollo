@@ -41,6 +41,7 @@
         }
     }
     h4, h5, h6 {
+        font-size: 18px;
         a:before {
             content: "";
         }
@@ -48,10 +49,6 @@
 
     h2, h3 {
         font-size: 22px;
-    }
-
-    h4, h5, h6 {
-        font-size: 18px;
     }
     a {
         color: #42b983;
@@ -61,7 +58,7 @@
         margin: 2em 0;
         padding-left: 20px;
         border-left: 4px solid #42b983;
-        footer cite::before {
+        footer cite:before {
             content: "—";
             padding: 0px 0.3em;
         }
