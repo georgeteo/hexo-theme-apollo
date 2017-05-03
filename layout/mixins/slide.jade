@@ -1,0 +1,11 @@
+mixin slide(item)
+    section(data-markdown
+        data-separator="#{config.slide.separator}"
+        data-separator-vertical="#{config.slide.separator_vertical}"
+        data-charset="#{config.slide.charset}")
+            script(type="text/template")!= item._content
+
+//- Index Page
+mixin slideTumb(item)
+    .slides
+        iframe(src=url_for(item.path) width="650" height="450" frameborder="0" allowfullscreen="")

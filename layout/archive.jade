@@ -2,7 +2,10 @@ extends partial/layout
 
 block container
     include mixins/post
-    include partial/tagcloud
+    if page.archive
+        include partial/tagcloud
+    if page.category === 'slide'
+        -console.log('slide help')
     +postList()
 
 block pagination

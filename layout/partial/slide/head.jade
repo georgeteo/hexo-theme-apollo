@@ -1,0 +1,29 @@
+meta(charset="utf-8")
+meta(name="X-UA-Compatible", content="IE=edge")
+
+title 
+    block site_title
+        = config.title
+block description
+    meta(name="description", content= config.description ? config.description : 'A Blog Powered By Hexo')
+
+meta(name="viewport", content="width=device-width, initial-scale=1")
+
+link(rel="icon", href=url_for(theme.favicon))
+link(rel="stylesheet", href=url_for("/reveal.js/css/reveal.css"))
+link(rel="stylesheet", href=url_for("/reveal.js/css/theme/black.css"))
+
+link(rel="stylesheet", href=url_for("/reveal.js/lib/css/zenburn.css"))
+
+
+script.
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '/reveal.js/css/print/pdf.css' : '/reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild(link);
+
+| !{ autoCanonical(config, page) }
+
+- var xml = config.url + '/atom.xml'
+    link(rel="search", type="application/opensearchdescription+xml", href=xml, title=config.title)

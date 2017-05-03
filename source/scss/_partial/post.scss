@@ -12,9 +12,11 @@
     .post-info {
         color: #7f8c8d;
         margin: 1.2em 0;
+
         span {
             margin-left: 0.5rem;
         }
+
         a.post-from {
             margin-left: 0.5rem;
             padding: 3px 6px;
@@ -27,9 +29,14 @@
 }
 
 .post-content {
-    h2, h3, h4, h5, h6 {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         position: relative;
         margin: 1em 0;
+
         a:before {
             content: "#";
             color: #42b983;
@@ -40,38 +47,49 @@
             font-weight: bold;
         }
     }
-    h4, h5, h6 {
+
+    h4,
+    h5,
+    h6 {
         font-size: 18px;
+
         a:before {
             content: "";
         }
     }
 
-    h2, h3 {
+    h2,
+    h3 {
         font-size: 22px;
     }
+
     a {
         color: #42b983;
         word-break: break-all;
     }
+
     blockquote {
         margin: 2em 0;
         padding-left: 20px;
         border-left: 4px solid #42b983;
+
         footer cite:before {
             content: "—";
-            padding: 0px 0.3em;
+            padding: 0 0.3em;
         }
     }
+
     img {
         display: block;
         max-width: 100%;
         margin: 1em auto;
     }
-    & > table,
-    & > figure.highlight {
+
+    & > figure.highlight,
+    & > table {
         box-shadow: 0 1px 2px rgba(0,0,0,0.125);
     }
+
     .tip {
         position: relative;
         margin: 2em 0;
@@ -80,10 +98,12 @@
         border-top-right-radius: 2px;
         border-bottom-right-radius: 2px;
         background-color: #f8f8f8;
+
         br {
             display: none;
         }
     }
+
     .tip:before {
         position: absolute;
         top: 14px;
@@ -110,6 +130,7 @@
     padding: 1em 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
+
     #mask-image {
         max-width: 95%;
     }
@@ -129,19 +150,25 @@ pre {
     line-height: 1.1em;
     background-color: #f8f8f8;
     overflow-x: auto;
-    table, tr, td {
+
+    table,
+    td,
+    tr {
         width: 100%;
         border-collapse: collapse;
         padding: 0;
         margin: 0;
     }
+
     .gutter {
         display: none;
     }
+
     .code pre {
         padding: 1.2em 1.4em;
         line-height: 1.5em;
         margin: 0;
+
         .line {
             width: auto;
             height: 18px;
@@ -161,16 +188,14 @@ pre {
     height: 15px;
     font-weight: 600;
 }
-
 @mixin code-signs($keys) {
-    @each $key in $keys {
+     @each $key in $keys{
         .highlight.#{$key} .code:after {
             content: to-upper-case($key);
             @extend %code-base;
         }
     }
 }
-
 $signs: ("html", "js", "bash", "css", "scss","diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts");
 @include code-signs($signs);
 
@@ -180,85 +205,166 @@ $signs: ("html", "js", "bash", "css", "scss","diff", "java", "xml", "python", "j
 
 pre {
     color: #525252;
-    .function .keyword,
-    .constant {
-       color: #0092db;
+
+    .constant,
+    .function .keyword {
+        color: #0092db;
     }
-    .keyword,
-    .attribute {
+
+    .attribute,
+    .keyword {
         color: #e96900;
     }
-    .number,
-    .literal {
+
+    .literal,
+    .number {
         color: #ae81ff;
     }
-    .tag,
-    .tag .title,
+
     .change,
-    .winutils,
+    .clojure .built_in,
     .flow,
     .lisp .title,
-    .clojure .built_in,
     .nginx .title,
-    .tex .special {
+    .tag,
+    .tag .title,
+    .tex .special,
+    .winutils {
         color: #2973b7;
     }
+
+    .regexp,
     .symbol,
     .symbol .string,
-    .value,
-    .regexp {
+    .value {
         color: #42b983;
     }
+
     .title {
         color: #83B917;
     }
-    .tag .value,
-    .string,
-    .subst,
-    .haskell .type,
-    .preprocessor,
-    .ruby .class .parent,
+
+    .addition,
+    .apache .cbracket,
+    .apache .tag,
+    .attr_selector,
     .built_in,
-    .sql .aggregate,
+    .django .filter .argument,
     .django .template_tag,
     .django .variable,
-    .smalltalk .class,
-    .javadoc,
-    .django .filter .argument,
-    .smalltalk .localvars,
-    .smalltalk .array,
-    .attr_selector,
-    .pseudo,
-    .addition,
-    .stream,
     .envvar,
-    .apache .tag,
-    .apache .cbracket,
-    .tex .command,
-    .prompt {
+    .haskell .type,
+    .javadoc,
+    .preprocessor,
+    .prompt,
+    .pseudo,
+    .ruby .class .parent,
+    .smalltalk .array,
+    .smalltalk .class,
+    .smalltalk .localvars,
+    .sql .aggregate,
+    .stream,
+    .string,
+    .subst,
+    .tag .value,
+    .tex .command {
         color: #42b983;
     }
-    .comment,
-    .java .annotation,
-    .python .decorator,
-    .template_comment,
-    .pi,
-    .doctype,
-    .shebang,
+
     .apache .sqbracket,
+    .comment,
+    .doctype,
+    .java .annotation,
+    .pi,
+    .python .decorator,
+    .shebang,
+    .template_comment,
     .tex .formula {
         color: #b3b3b3;
     }
+
     .deletion {
         color: #BA4545;
     }
+
     .coffeescript .javascript,
     .javascript .xml,
     .tex .formula,
-    .xml .javascript,
-    .xml .vbscript,
+    .xml .cdata,
     .xml .css,
-    .xml .cdata {
+    .xml .javascript,
+    .xml .vbscript {
         opacity: 0.5;
+    }
+}
+
+.tags {
+    float: right;
+    margin: 0;
+    padding: 0;
+    // position: absolute;
+    right: 24px;
+    bottom: -12px;
+    list-style: none;
+
+    a,
+    li {
+        float: left;
+        height: 24px;
+        line-height: 24px;
+        position: relative;
+        font-size: 11px;
+    }
+
+    a {
+        margin-left: 20px;
+        padding: 0 10px 0 12px;
+        background: #42b983;
+        color: #fff;
+        text-decoration: none;
+        -moz-border-radius-bottomright: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        -moz-border-radius-topright: 4px;
+        -webkit-border-top-right-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    a:before {
+        content: "";
+        float: left;
+        position: absolute;
+        top: 0;
+        left: -12px;
+        width: 0;
+        height: 0;
+        border-color: transparent #42b983 transparent transparent;
+        border-style: solid;
+        border-width: 12px 12px 12px 0;
+    }
+
+    a:after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        float: left;
+        width: 4px;
+        height: 4px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        background: #fff;
+        -moz-box-shadow: -1px -1px 2px #004977;
+        -webkit-box-shadow: -1px -1px 2px #004977;
+        box-shadow: -1px -1px 2px #004977;
+    }
+
+    a:hover {
+        background: #555;
+    }
+
+    a:hover:before {
+        border-color: transparent #555 transparent transparent;
     }
 }

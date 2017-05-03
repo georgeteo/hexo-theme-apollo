@@ -1,0 +1,12 @@
+extends partial/slide/slide
+
+block site_title
+    != page.title + " · " + config.title
+
+block description
+    - var desc = page.desc || page.title + ' - ' + config.author;
+    meta(name="description", content=desc)
+
+block slides
+    include mixins/slide
+    +slide(page)

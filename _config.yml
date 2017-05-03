@@ -1,6 +1,7 @@
 menu:
     Blog: /
     Archive: /archives/
+    Slide: /categories/slide/
     GitHub: https://github.com/wicksome
     Resume: https://www.linkedin.com/in/yeongjun/
     Rss: /atom.xml
