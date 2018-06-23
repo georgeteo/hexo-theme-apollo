@@ -3,7 +3,6 @@ mixin postInfo(item)
         != full_date(item.date, 'll')
         if item.from && (is_home() || is_post())
             a.post-from(href=item.from target="_blank" title=item.from)!= __('translated')
-//            a.post-from(href=item.from target="_blank" title=item.from)
 
 mixin postMeta(item)
     .post-info
