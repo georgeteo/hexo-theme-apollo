@@ -2,28 +2,26 @@ menu:
     Blog: /
     Archive: /archives/
     Slide: /categories/slide/
-    GitHub: https://github.com/wicksome
-    Resume: https://www.linkedin.com/in/yeongjun/
-    Rss: /atom.xml
+    GitHub: https://github.com/georgeteo
+    Resume: https://www.linkedin.com/in/georgeteo/
 
 favicon: /favicon.ico
 logo: /favicon.png
 
 # Comment
-# e.g disqus: seansun
-disqus: wicksome
-duoshuo:
-cloudTie:
+# disqus: wicksome
+# duoshuo:
+# cloudTie:
 
 # Analytics
 # google-analytics:
-ga: UA-43444044-3
+# ga: UA-43444044-3
 
 # Adsense
 # google-adsense:
-gad:
-    client: ca-pub-2402079508512433
-    slot: 9218385844
+# gad:
+#     client: ca-pub-2402079508512433
+#     slot: 9218385844
 
 # Copyright Infomation
-startyear: 2017
+startyear: 2018
