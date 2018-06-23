@@ -8,6 +8,8 @@ menu:
 favicon: /favicon.ico
 logo: /favicon.png
 
+## Unused Start ##
+
 # Comment
 # disqus: wicksome
 # duoshuo:
@@ -22,6 +24,8 @@ logo: /favicon.png
 # gad:
 #     client: ca-pub-2402079508512433
 #     slot: 9218385844
+#
+## Unused End ##
 
 # Copyright Infomation
 startyear: 2018
